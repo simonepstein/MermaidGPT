@@ -17,14 +17,17 @@ def generate_prompt(prompt, chart_type, direction):
         },
         {
             "role": "user",
+            "content": "When generating markdown for multiline text, make sure to <br> to reflect line breaks.",
+        },
+        {
+            "role": "user",
             "content": "Do not provide any additional information or notes, ONLY markdown.",
         },
     ]
 
     # Generate prompt using OpenAI model
     prompt_formatted = f"""
-    Generate markdown for mermaid.js for a chart of type {chart_type}
-with the following details and only return the markdown that can be pasted into a mermaid.js viewer:
+    Generate markdown for mermaid.js for a chart of type {chart_type} with orientation {direction} and the following details and only return the markdown that can be pasted into a mermaid.js viewer:
 {prompt}
 """
 
