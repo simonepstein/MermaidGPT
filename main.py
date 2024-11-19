@@ -47,7 +47,9 @@ elif st.session_state["stage"] == "show_markdown" or st.session_state["stage"] =
         cancel = st.form_submit_button("Refine prompt", on_click=refine_prompt)
         try:
             diagram_img = generate_diagram(st.session_state["markdown"])
-            st.image(diagram_img, use_container_width=True)
+            col1, col2, col3 = st.columns(3)
+            with col2:
+                st.image(diagram_img, use_container_width=True)
         except Exception as e:
             st.error(f"Something went wrong. Please try again or slightly rephrase your prompt. Error: {e}")
 
