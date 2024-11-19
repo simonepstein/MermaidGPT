@@ -21,6 +21,7 @@
 </p>
 
 <br><!-- TABLE OF CONTENTS -->
+
 <details>
   <summary>Table of Contents</summary><br>
 
@@ -39,30 +40,30 @@
 </details>
 <hr>
 
-##  Overview
+## Overview
 
 MermaidGPT is an innovative software project that empowers users to generate diagrams from text prompts through a seamless interface. By leveraging OpenAIs GPT-3.5-turbo model and the Mermaid API, MermaidGPT enables the creation of complex graph data visualizations with ease. The application provides a user-friendly interface, complete with a configurable sidebar, to facilitate input, processing, and rendering of diagrams. With MermaidGPT, users can effortlessly transform text into visually stunning diagrams, making it an invaluable tool for a wide range of applications, from technical documentation to data analysis and education.
 
 ---
 
-##  Features
+## Features
 
-|    |   Feature         | Description |
-|----|-------------------|---------------------------------------------------------------|
-| ⚙️  | **Architecture**  | Monolithic design with 4 main modules: main, mermaid, prompt, and sidebar. Python-based, using OpenAI API and Mermaid API for diagram generation. |
-| 🔩 | **Code Quality**  | Well-structured code with clear variable names and modular functions. Could benefit from type hints and docstrings for improved readability. |
-| 📄 | **Documentation** | Limited documentation, mostly in the form of inline comments. No README or separate documentation files. Could benefit from a comprehensive README and API documentation. |
-| 🔌 | **Integrations**  | Integrates with OpenAI API (GPT-3.5-turbo model) and Mermaid API for diagram generation. |
-| 🧩 | **Modularity**    | Modular codebase with separate files for distinct functionality, making it easy to maintain and update individual components. |
-| 🧪 | **Testing**       | No testing frameworks or tools used. Could benefit from unit testing and integration testing to ensure functionality and catch errors. |
-| ⚡️  | **Performance**   | Performance is dependent on OpenAI API and Mermaid API responses. Could benefit from optimization techniques to improve response times. |
-| 🛡️ | **Security**      | OpenAI API key is stored in the code, which is a security risk. Should be stored as an environment variable or secure storage. |
-| 📦 | **Dependencies**  | Depends on Python and Py, with external dependencies on OpenAI API and Mermaid API. |
-| 🚀 | **Scalability**   | Currently designed for a single-user interface, may require significant changes to handle increased traffic and load. |
+|     | Feature           | Description                                                                                                                                                               |
+| --- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ⚙️  | **Architecture**  | Monolithic design with 4 main modules: main, mermaid, prompt, and sidebar. Python-based, using OpenAI API and Mermaid API for diagram generation.                         |
+| 🔩  | **Code Quality**  | Well-structured code with clear variable names and modular functions. Could benefit from type hints and docstrings for improved readability.                              |
+| 📄  | **Documentation** | Limited documentation, mostly in the form of inline comments. No README or separate documentation files. Could benefit from a comprehensive README and API documentation. |
+| 🔌  | **Integrations**  | Integrates with OpenAI API (GPT-3.5-turbo model) and Mermaid API for diagram generation.                                                                                  |
+| 🧩  | **Modularity**    | Modular codebase with separate files for distinct functionality, making it easy to maintain and update individual components.                                             |
+| 🧪  | **Testing**       | No testing frameworks or tools used. Could benefit from unit testing and integration testing to ensure functionality and catch errors.                                    |
+| ⚡️ | **Performance**   | Performance is dependent on OpenAI API and Mermaid API responses. Could benefit from optimization techniques to improve response times.                                   |
+| 🛡️  | **Security**      | OpenAI API key is stored in the code, which is a security risk. Should be stored as an environment variable or secure storage.                                            |
+| 📦  | **Dependencies**  | Depends on Python and Py, with external dependencies on OpenAI API and Mermaid API.                                                                                       |
+| 🚀  | **Scalability**   | Currently designed for a single-user interface, may require significant changes to handle increased traffic and load.                                                     |
 
 ---
 
-##  Repository Structure
+## Repository Structure
 
 ```sh
 └── MermaidGPT/
@@ -75,12 +76,12 @@ MermaidGPT is an innovative software project that empowers users to generate dia
 
 ---
 
-##  Modules
+## Modules
 
 <details closed><summary>.</summary>
 
 | File                                                                        | Summary                                                                                                                                                                                                                                                                                                                      |
-| ---                                                                         | ---                                                                                                                                                                                                                                                                                                                          |
+| --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [main.py](https://github.com/jgordley/MermaidGPT/blob/master/main.py)       | Orchestrates the MermaidGPT application, providing a user interface for generating diagrams from text prompts. It sets up the layout, initializes the sidebar, and facilitates the interaction between user input, OpenAI API calls, and diagram rendering, ultimately displaying the generated image and markdown response. |
 | [mermaid.py](https://github.com/jgordley/MermaidGPT/blob/master/mermaid.py) | Generates diagrams by encoding graph data and sending it to the Mermaid API, which returns an image that is then opened and returned as a PIL Image object, enabling visual representation of complex graph data within the MermaidGPT application.                                                                          |
 | [prompt.py](https://github.com/jgordley/MermaidGPT/blob/master/prompt.py)   | Transforms user input into a Mermaid.js formatted markdown chart by leveraging OpenAIs GPT-3.5-turbo model. It sets the OpenAI API key, generates a prompt, and sends a chat request to the model, ultimately returning a markdown graph that can be pasted into a Mermaid.js viewer.                                        |
@@ -90,20 +91,20 @@ MermaidGPT is an innovative software project that empowers users to generate dia
 <details closed><summary>components</summary>
 
 | File                                                                                   | Summary                                                                                                                                                                                                                                                                                      |
-| ---                                                                                    | ---                                                                                                                                                                                                                                                                                          |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [sidebar.py](https://github.com/jgordley/MermaidGPT/blob/master/components/sidebar.py) | Configures and personalizes the user interface by setting up an OpenAI API key input field and displaying essential information about the MermaidGPT application, including usage instructions, contributor links, and credits, in a conveniently accessible sidebar within the application. |
 
 </details>
 
 ---
 
-##  Getting Started
+## Getting Started
 
 **System Requirements:**
 
-* **Python**: `version x.y.z`
+- **Python**: `version x.y.z`
 
-###  Installation
+### Installation
 
 <h4>From <code>source</code></h4>
 
@@ -114,42 +115,46 @@ MermaidGPT is an innovative software project that empowers users to generate dia
 > ```
 >
 > 2. Change to the project directory:
+>
 > ```console
 > $ cd MermaidGPT
 > ```
 >
 > 3. Install the dependencies:
+>
 > ```console
 > $ pip install -r requirements.txt
 > ```
 
-###  Usage
+### Usage
 
 <h4>From <code>source</code></h4>
 
 > Run MermaidGPT using the command below:
+>
 > ```console
-> $ python main.py
+> $ streamlit run main.py --server.runOnSave=true
 > ```
 
-###  Tests
+### Tests
 
 > Run the test suite using the command below:
+>
 > ```console
 > $ pytest
 > ```
 
 ---
 
-##  Project Roadmap
+## Project Roadmap
 
-- [X] `► INSERT-TASK-1`
+- [x] `► INSERT-TASK-1`
 - [ ] `► INSERT-TASK-2`
 - [ ] `► ...`
 
 ---
 
-##  Contributing
+## Contributing
 
 Contributions are welcome! Here are several ways you can contribute:
 
@@ -194,13 +199,13 @@ Contributions are welcome! Here are several ways you can contribute:
 
 ---
 
-##  License
+## License
 
 This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
 
 ---
 
-##  Acknowledgments
+## Acknowledgments
 
 - List any resources, contributors, inspiration, etc. here.
 
